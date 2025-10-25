@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculator with History</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="calculator">
+      <div class="display">
+        <div id="expression" class="expression"></div>
+        <input id="result" class="result" readonly />
+      </div>
+
+      <div class="keys">
+        <button class="btn func" data-action="clear">C</button>
+        <button class="btn func" data-action="back">⌫</button>
+        <button class="btn func" data-action="percent">%</button>
+        <button class="btn op" data-value="/">÷</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn op" data-value="*">×</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn op" data-value="-">−</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn op" data-value="+">+</button>
+
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn func" data-action="equals">=</button>
+        <button class="btn func" id="historyToggle">History</button>
+      </div>
+    </section>
+
+    <aside class="history" id="historyPanel" aria-hidden="true">
+      <div class="history-head">
+        <h3>History</h3>
+        <div>
+          <button class="small" id="clearHistory">Clear</button>
+          <button class="small" id="exportHistory">Export</button>
+        </div>
+      </div>
+      <ul id="historyList"></ul>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
